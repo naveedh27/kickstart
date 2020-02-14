@@ -24,7 +24,7 @@ accounts = await web3.eth.getAccounts();
 
  const inbox = await new web3.eth.Contract(JSON.parse(compiledFactory.interface))
     .deploy({data:compiledFactory.bytecode})
-    .send({from : accounts[0],gas: '10000000' });
+    .send({from : accounts[0], gas: '10000000' });
 
   //console.log(interface);
   console.log('Contract Address '+inbox.options.address);
